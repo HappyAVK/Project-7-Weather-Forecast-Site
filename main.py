@@ -1,9 +1,11 @@
 import streamlit as st
 import plotly.express as px
+from backend import get_data
 
 
 st.title("Weather Forecast")
 place = st.text_input("Place: ")
+
 
 days = st.slider("Forecast Days", min_value=1, max_value=5,
                  help="Look at the forecast five days ahead from the current date")
